@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Converso
 
-## Getting Started
+## SaaS App - LMS with Next.js, Supabase & Payments
 
-First, run the development server:
+### Tech Stack
+- **[Clerk](https://jsm.dev/converso-clerk)** is for authentication, user management, and billing.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* **[Next.js](https://nextjs.org/)** React framework.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **[Sentry](https://jsm.dev/converso-sentry)** is an error tracking and performance monitoring tool.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **[shadcn/ui](https://ui.shadcn.com/)** is a customizable component library built on Radix UI and Tailwind CSS.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **[Supabase](https://supabase.com/)** is an open-source backend-as-a-service platform that provides instant APIs, real-time subscriptions, authentication, storage, and a PostgreSQL database.
 
-## Learn More
+* **[Tailwind CSS](https://tailwindcss.com/)** is a utility-first CSS framework.
 
-To learn more about Next.js, take a look at the following resources:
+- **[Vapi](https://jsm.dev/converso-vapi)** is a developer-centric voice AI platform.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **[Zod](https://zod.dev/)** is a TypeScript-first schema validation library.
