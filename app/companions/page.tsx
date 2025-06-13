@@ -1,6 +1,6 @@
 function CompanionsLibrary() {
     return (
-        <div></div>
+        <div>Companions</div>
     );
 }
 
