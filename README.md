@@ -1,4 +1,4 @@
-# Converso
+# Companions
 
 ## SaaS App - LMS with Next.js, Supabase & Payments
 
