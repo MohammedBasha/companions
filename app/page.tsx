@@ -14,7 +14,7 @@ const Page = () => {
                     topic="Neural Network of the Brain"
                     subject="Science"
                     duration={45}
-                    color="#E5D0FF"
+                    color="#afcadd"
                 />
                 <CompanionCard
                     id="456"
@@ -22,7 +22,7 @@ const Page = () => {
                     topic="Derivatives & Integrals"
                     subject="Maths"
                     duration={30}
-                    color="#FFDA6E"
+                    color="#9cc944"
                 />
                 <CompanionCard
                     id="789"
@@ -30,7 +30,7 @@ const Page = () => {
                     topic="English Literature "
                     subject="Language"
                     duration={30}
-                    color="#BDE7FF"
+                    color="#83b9aa"
                 />
             </section>
             <section className="home-section">
