@@ -8,7 +8,8 @@ function Navbar() {
         <nav className="navbar">
             <Link href="/">
                 <div className="felx items-center gap-2.5 cursor-pointer">
-                    <Image src="/images/logo.png" alt="logo" width={70} height={72} />
+                    <Image src="/images/logo.png" alt="logo" width={120} height={120}
+                           sizes="(max-width: 768px) 80px" />
                 </div>
             </Link>
             <div className="flex items-center gap-8">
