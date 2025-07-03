@@ -3,6 +3,7 @@ import CompanionCard from "@/components/CompanionCard";
 import {getSubjectColor} from "@/lib/utils";
 import SearchInput from "@/components/SearchInput";
 import SubjectFilter from "@/components/SubjectFilter";
+import {currentUser} from "@clerk/nextjs/server";
 
 const CompanionsLibrary = async ({searchParams}: SearchParams) => {
     const filters = await searchParams;
@@ -10,6 +11,8 @@ const CompanionsLibrary = async ({searchParams}: SearchParams) => {
     const topic = filters.topic ? filters.topic : '';
 
     const companions = await getAllCompanions({subject, topic});
+    const user = await currentUser();
+    const usersId = companions?.filter(companion => user?.id === companion.author);
 
     return (
         <main>
@@ -21,15 +24,15 @@ const CompanionsLibrary = async ({searchParams}: SearchParams) => {
                 </div>
             </section>
             <section className="companions-grid">
-                {companions?.length > 0 ?
+                {usersId.length ?
                     (
-                    companions.map(
-                        (companion) => (
-                            <CompanionCard key={companion.id}
-                                {...companion}
-                                color={getSubjectColor(companion.subject)}
-                            />
-                        ))
+                        usersId.map(
+                            (companion) => (
+                                <CompanionCard key={companion.id}
+                                    {...companion}
+                                    color={getSubjectColor(companion.subject)}
+                                />
+                            ))
                     ) : (
                         <p className="text-center">No companions found</p>
                     )

@@ -22,12 +22,12 @@ import {redirect} from "next/navigation";
 import {createCompanion} from "@/lib/actions/companion.actions";
 
 const formSchema = z.object({
-    name: z.string().min(1, {message: "Name must be at least 1 character"}),
-    subject: z.string().min(1, {message: "Subject must be at least 1 character"}),
-    topic: z.string().min(1, {message: "Topic must be at least 1 character"}),
-    voice: z.string().min(1, {message: "Voice must be at least 1 character"}),
-    style: z.string().min(1, {message: "Style must be at least 1 character"}),
-    duration: z.coerce.number().min(1, {message: "Duration must be at least 1 character"}),
+    name: z.string().min(3, {message: "Name must be at least 3 character"}),
+    subject: z.string().min(3, {message: "Subject is required"}),
+    topic: z.string().min(3, {message: "Topic must be at least 3 character"}),
+    voice: z.string().min(4, {message: "Voice is required"}),
+    style: z.string().min(3, {message: "Style is required"}),
+    duration: z.coerce.number().positive(),
 })
 
 function CompanionForm() {

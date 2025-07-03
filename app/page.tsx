@@ -17,8 +17,7 @@ const Page = async () => {
             <section className="home-section-1 border-b-1 border-black pb-4">
                 {usersId.length ?
                     (
-                        companions.map(companion => (
-                            user && user.id === companion.author &&
+                        usersId.map(companion => (
                             <CompanionCard
                                 key={companion.id}
                                 {...companion}
